@@ -780,7 +780,7 @@ class DataService {
         const token = localStorage.getItem('accessToken');
         const body = JSON.stringify(username);
         const headers = { 'content-type': 'application/json', 'Authorization': `Bearer ${token}` };
-        this.DataObservable = this.http.get('http://68.183.139.30:3000/budget', { headers: headers, params: { userid: username } }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["shareReplay"])());
+        this.DataObservable = this.http.get('http://138.197.16.76:3000/budget', { headers: headers, params: { userid: username } }).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_2__["shareReplay"])());
         //this.DataObservable = this.http.get('http://localhost:3000/budget',{ headers: headers }).pipe(shareReplay());
         return this.DataObservable;
     }
@@ -789,7 +789,7 @@ class DataService {
         const headers = { 'content-type': 'application/json', 'Authorization': `Bearer ${token}` };
         const body = JSON.stringify(data);
         console.log(body);
-        return this.http.post('http://68.183.139.30:3000/budget', body, { 'headers': headers });
+        return this.http.post('http://138.197.16.76:3000/budget', body, { 'headers': headers });
         //return this.http.post('http://localhost:3000/budget',body,{'headers':headers});
     }
     addFeedbackData(data) {
@@ -797,14 +797,14 @@ class DataService {
         const headers = { 'content-type': 'application/json', 'Authorization': `Bearer ${token}` };
         const body = JSON.stringify(data);
         console.log(body);
-        return this.http.post('http://68.183.139.30:3000/feedback', body, { 'headers': headers });
+        return this.http.post('http://138.197.16.76:3000/feedback', body, { 'headers': headers });
         //return this.http.post('http://localhost:3000/feedback',body,{'headers':headers});
     }
     userSignUp(data) {
         const headers = { 'content-type': 'application/json' };
         const body = JSON.stringify(data);
         console.log(body);
-        return this.http.post('http://68.183.139.30:3000/users', body, { 'headers': headers });
+        return this.http.post('http://138.197.16.76:3000/users', body, { 'headers': headers });
     }
     invaliduser() {
         this.toastr.error("User does not exist. Please proceed to signup page", 'Error');
@@ -813,7 +813,7 @@ class DataService {
         const headers = { 'content-type': 'application/json' };
         const body = JSON.stringify(data);
         console.log(body);
-        return this.http.post('http://68.183.139.30:3000/auth', body, { 'headers': headers }).subscribe((res) => {
+        return this.http.post('http://138.197.16.76:3000/auth', body, { 'headers': headers }).subscribe((res) => {
             console.log(res);
             this.userRecord['username'] = data.username;
             this.userRecord['password'] = data.password;

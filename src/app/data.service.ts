@@ -49,7 +49,7 @@ export class DataService {
         const token = localStorage.getItem('accessToken');
         const body=JSON.stringify(username);
         const headers = {'content-type': 'application/json','Authorization' : `Bearer ${token}`};
-        this.DataObservable = this.http.get('http://127.0.0.1:3000/budget',{ headers: headers,params:{userid : username }}).pipe(shareReplay());
+        this.DataObservable = this.http.get('http://138.197.16.76:3000/budget',{ headers: headers,params:{userid : username }}).pipe(shareReplay());
         //this.DataObservable = this.http.get('http://localhost:3000/budget',{ headers: headers }).pipe(shareReplay());
         return this.DataObservable;
     }
@@ -59,7 +59,7 @@ export class DataService {
       const headers = {'content-type': 'application/json','Authorization' : `Bearer ${token}`};
       const body=JSON.stringify(data);
       console.log(body)
-      return this.http.post('http://127.0.0.1:3000/budget',body,{'headers':headers});
+      return this.http.post('http://138.197.16.76:3000/budget',body,{'headers':headers});
       //return this.http.post('http://localhost:3000/budget',body,{'headers':headers});
     }
 
@@ -68,7 +68,7 @@ export class DataService {
       const headers = {'content-type': 'application/json','Authorization' : `Bearer ${token}`};
       const body=JSON.stringify(data);
       console.log(body)
-      return this.http.post('http://127.0.0.1:3000/feedback',body,{'headers':headers});
+      return this.http.post('http://138.197.16.76:3000/feedback',body,{'headers':headers});
       //return this.http.post('http://localhost:3000/feedback',body,{'headers':headers});
     }
 
@@ -76,7 +76,7 @@ export class DataService {
       const headers = {'content-type': 'application/json'};
       const body=JSON.stringify(data);
       console.log(body)
-      return this.http.post('http://127.0.0.1:3000/users',body,{'headers':headers});
+      return this.http.post('http://138.197.16.76:3000/users',body,{'headers':headers});
     }
 
     invaliduser(){
@@ -87,7 +87,7 @@ export class DataService {
       const headers = {'content-type': 'application/json'};
       const body=JSON.stringify(data);
       console.log(body)
-      return this.http.post('http://127.0.0.1:3000/auth',body,{'headers':headers}).subscribe((res:any)=>{
+      return this.http.post('http://138.197.16.76:3000/auth',body,{'headers':headers}).subscribe((res:any)=>{
         console.log(res);
         this.userRecord['username'] = data.username;
         this.userRecord['password'] = data.password;
