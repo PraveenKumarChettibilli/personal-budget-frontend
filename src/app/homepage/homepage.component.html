@@ -1,0 +1,74 @@
+<div class="container center">
+    <!-- <pb-breadcrumbs></pb-breadcrumbs> -->
+    <div class="page-area" id="maincontent">
+
+
+        <pb-article>
+            <h1>Stay on track</h1>
+            <div>Do you know where your money is going? You'd be surprised if you stopped to look for it! Real data is required for proper budget management... and this app will assist you!</div>
+        </pb-article>
+
+         <pb-article>
+             <h1>Alerts</h1>
+             <div>What if your clothes budget was depleted? You will be notified. The objective is to never go over budget.</div>
+         </pb-article>
+
+
+        <pb-article>
+            <h1>Free</h1>
+            <div>This app is completely free!!! And you are the sole owner of your data!</div>
+        </pb-article>
+
+
+        <pb-article>
+            <h1>Results</h1>
+            <div>People that stick to a budget and budget each expense get out of debt faster!
+              They also live better lives because they spend without shame or anxiety because they know it is all good and accounted for.</div>
+        </pb-article>
+
+        <pb-article>
+            <div class="container">
+                <pb-hometable></pb-hometable>
+            </div>
+        </pb-article>
+
+        <pb-article>
+            <h1>Current Budget Distribution</h1>
+            <div>
+                <canvas id="myChart" width="400" height="400" style="width:350px;height:350px"></canvas>
+            </div>
+        </pb-article>
+
+        <pb-article>
+            <h1>Maximum Budget Distribution</h1>
+            <div>
+                <canvas id="myMaxBudgetChart" width="400" height="400" style="width:350px;height:350px"></canvas>
+                <pb-maxbudgetchart></pb-maxbudgetchart>
+            </div>
+        </pb-article>
+
+
+        <pb-article>
+            <h1>Expected Budget v/s Actual Budget</h1>
+            <div>
+                <pb-dualbar></pb-dualbar>
+            </div>
+
+        </pb-article>
+
+        <!-- <pb-article>
+            <div class="container">
+                <pb-line-chart></pb-line-chart>
+                <h1>Line Chart</h1>
+            </div>
+        </pb-article> -->
+
+    </div>
+</div>
+<!-- <pb-addbudget></pb-addbudget> -->
+<div class="container">
+    <div class="row">
+        <h1>Add a new expense here</h1>
+        <button (click)="navigateToAddBudget()">Add New Expense</button>
+    </div>
+</div>
